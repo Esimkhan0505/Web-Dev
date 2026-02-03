@@ -1,0 +1,157 @@
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: #111;
+    background: #f0f2f5;
+}
+
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+    width: min(980px, 92vw);
+    margin: 0 auto;
+}
+
+.center-page {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px; height: 1px;
+    margin: -1px; padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+.gh-body { background: #fff; color: #111; }
+.gh-main { padding: 48px 0 64px; }
+
+.gh-hero {
+  text-align: center;
+  padding: 28px 12px 18px;
+}
+
+.gh-hero h1 {
+  margin: 0 0 10px;
+  font-size: clamp(28px, 3vw, 44px);
+  letter-spacing: -0.5px;
+}
+
+.gh-sub {
+  margin: 0 auto 18px;
+  max-width: 620px;
+  color: #555;
+}
+
+.gh-cta {
+  display: inline-flex;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #111;
+  color: #fff;
+  font-weight: 700;
+}
+
+.gh-pricing {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.gh-tier {
+  position: relative;
+  padding: 18px;
+  border: 1px solid #eee;
+  box-shadow: none;
+  border-radius: 14px;
+}
+
+.tier-head h2 { margin: 0 0 6px; }
+.tier-price { margin: 0 0 12px; font-size: 28px; font-weight: 800; }
+.tier-price span { font-size: 14px; font-weight: 600; color: #666; }
+
+.tier-btn {
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-weight: 700;
+  background: #fff;
+}
+
+.tier-btn.dark { background: #111; color: #fff; border-color: #111; }
+.tier-btn.outline { background: transparent; }
+
+.tier-actions { display: grid; gap: 10px; }
+
+.tier-list {
+  margin: 14px 0 0;
+  padding-left: 18px;
+  color: #333;
+}
+
+.recommended {
+  border: 2px solid #2f81f7;
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  left: 18px;
+  background: #2f81f7;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.gh-addons {
+  margin-top: 44px;
+}
+
+.addons-title {
+  margin: 0 0 14px;
+  font-size: 22px;
+}
+
+.addons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.addon {
+  padding: 16px;
+  border: 1px solid #eee;
+  box-shadow: none;
+  border-radius: 14px;
+}
+
+.addon h3 { margin: 0 0 6px; }
+.addon p { margin: 0; color: #555; }
+
+@media (max-width: 980px) {
+  .gh-pricing { grid-template-columns: 1fr; }
+  .addons-grid { grid-template-columns: 1fr; }
+}
